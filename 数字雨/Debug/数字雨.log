@@ -1,0 +1,3 @@
+﻿  源.cpp
+d:\zhw\作业\数据结构\结课项目\数字雨\数字雨\rain.h(162): warning C4715: “get_control_rain”: 不是所有的控件路径都返回值
+  数字雨.vcxproj -> D:\zhw\作业\数据结构\结课项目\数字雨\Debug\数字雨.exe
