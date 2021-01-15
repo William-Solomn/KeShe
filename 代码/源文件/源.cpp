@@ -1,4 +1,3 @@
-
 #include"statement.h"
 #include"initscene.h"
 #include"thunder.h"
@@ -20,7 +19,7 @@ void raindrop()//池塘夜降彩色雨主体函数
 	//将雷电函数单独放到一个线程中执行，避免出现打雷时雨滴停止下落的情况
 	thundering = CreateThread(NULL, 0, thunder, NULL, 0, NULL);
 	//循环播放背景音乐和雨声
-	mciSendString(L"open 三国杀.mp3 alias bgm", 0, 0, 0);
+	mciSendString(L"open backGroundMuic.mp3 alias bgm", 0, 0, 0);
 	mciSendString(L"play bgm repeat", 0, 0, 0);
 	mciSendString(L"open 雨声.mp3 alias rain", 0, 0, 0);
 	mciSendString(L"play rain repeat", 0, 0, 0);
@@ -62,5 +61,7 @@ int main()
 	initScene();//初始化场景
 	//开始展示池塘夜降彩色雨景象
 	raindrop();
+
 	return 0;
+
 }

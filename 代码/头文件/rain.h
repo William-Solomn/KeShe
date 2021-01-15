@@ -29,8 +29,8 @@ void clear_rain(int i)
 		setlinecolor(BLACK);
 	if(r[i].top>waterHeight)
 	{
-		setfillcolor(BLUE);
-		setlinecolor(BLUE);
+		setfillcolor(RGB(25, 48, 66));
+		setlinecolor(RGB(25, 48, 66));
 	}
 	fillpie(r[i].left, r[i].top, r[i].right, r[i].bottom, r[i].stangle, r[i].endangle);
 }
@@ -131,13 +131,13 @@ int get_control_rain()
 	ch = _getch();
 	switch (ch)
 	{
-	case 72: {
+	case 80: {
 		if (keynumber < 2) {
 			keynumber++;
 		}
 		return keynumber;
 	}
-	case 80: {
+	case 72: {
 		if (keynumber > 0) {
 			keynumber--;
 		}

@@ -1,32 +1,25 @@
 #pragma once
-#include <stdlib.h>
-#include<easyx.h>
 #include <conio.h>
 #include <time.h>
-#include <dos.h>
 #include <graphics.h>
-#include<stdio.h>
-#include<ctime>
-#include<Windows.h>
-#include <Mmsystem.h>	
 #pragma comment ( lib, "Winmm.lib" )
 #define WIN_WIDTH 640//图形界面宽度
 #define WIN_HEIGHT 480//图形界面高度
 int raindropNumber;//雨量
 int wind_flag; //左右中 -1,0,1 
 int rainTime = 0;//下雨时长
-int thunderTime = 5000;//电闪雷鸣时间间隔
+int thunderTime = 3100;//电闪雷鸣时间间隔
 HANDLE thundering;//雷电线程句柄
 TCHAR s[10];//通用字符用来接收需要进行字符串转换的变量
-double waterLevel = 1.5;//池塘水位，初始为1.5
+double waterLevel = 0;//雨量
 double lastWaterLevel = 0;//上次池塘水位
 int waterHeight = 350;//池塘绘制时的y坐标
 //不同类型的雨水的数量
 enum raintype_number
 {
-	little_rain_number = 25,
-	middle_rain_number = 35,
-	big_rain_number = 50
+	little_rain_number = 35,
+	middle_rain_number = 50,
+	big_rain_number = 70
 };
 struct rainCircle//涟漪结构体
 {
@@ -51,4 +44,5 @@ typedef struct rainnode//雨滴结构体
 	int rainLength;//雨滴长度
 	struct rainCircle riffle;//雨滴相对应的涟漪
 } rain;
+
 rain r[big_rain_number];

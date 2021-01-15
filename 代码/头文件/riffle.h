@@ -16,7 +16,7 @@ void clearRainCircle(int i)//清除涟漪函数
 
 {
 	//使用池塘颜色覆盖掉涟漪，以达到清除效果
-	setcolor(BLUE);
+	setcolor(RGB(25, 48, 66));
 	ellipse(r[i].riffle.x - r[i].riffle.curR, r[i].riffle.y - r[i].riffle.curR / 3, 
 		r[i].riffle.x + r[i].riffle.curR, r[i].riffle.y + r[i].riffle.curR / 3);
 }

@@ -1,0 +1,1 @@
+- 若遇到easyx库打不开的问题，可以参考[vs2019打不开easyX库的问题](https://blog.csdn.net/a_pogrammer/article/details/112184636)

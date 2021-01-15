@@ -3,7 +3,7 @@
 DWORD WINAPI thunder(LPVOID lpParam)//电闪雷鸣函数（单独一个线程）
 {
 	IMAGE thunder;
-	loadimage(&thunder, L"闪电.jpg", 120, 200);//用thunder变量接收闪电图片
+	loadimage(&thunder, L"thunderBackground.jpg", 120, 200);//用thunder变量接收闪电图片
 	int thunder_X;//定义闪电出现的x坐标
 	for (; ; rainTime++)
 	{

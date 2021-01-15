@@ -11,32 +11,27 @@ void over()//场景结束函数
 	_stprintf_s(s, _T("%.5f"), waterLevel);//将浮点型水位转化为字符串类型，以用来显示在图形界面上
 	settextstyle(50, 0, L"黑体");
 	//输出文字表示下雨结束
-	setcolor(LIGHTRED);
-	outtextxy(150, 200, L"一夜过后.....");
+	setcolor(YELLOW);
+	outtextxy(150, 200, L"雨停之后.....");
 	_getch();
 	cleardevice();//清屏来显示池塘水位
 	//显示最终池塘水位
 	IMAGE bg;
-	loadimage(&bg, L"梦幻.jpg", WIN_WIDTH, WIN_HEIGHT);
+	loadimage(&bg, L"image.jpg", WIN_WIDTH, WIN_HEIGHT);
 	putimage(0, 0, &bg);
-	setcolor(LIGHTBLUE);
+	setcolor(YELLOW);
 	settextstyle(50, 0, L"黑体");
-	outtextxy(70, 100, L"池塘水位：");
-	outtextxy(320, 100, s);
+	outtextxy(70, 200, L"降雨量：");
+	outtextxy(320, 200, s);
 	_getch();
 	//显示结尾图片
 	IMAGE secondDay;
-	loadimage(&secondDay, L"梦幻.jpg", WIN_WIDTH, WIN_HEIGHT);
+	loadimage(&secondDay, L"image.jpg", WIN_WIDTH, WIN_HEIGHT);
 	putimage(0, 0, &secondDay);
 	settextstyle(50, 0, L"黑体");
 	settextcolor(LIGHTRED);
-	outtextxy(50, 100, L"谢");
-	settextcolor(LIGHTBLUE);
-	outtextxy(110, 150, L"谢");
-	settextcolor(YELLOW);
-	outtextxy(170, 200, L"观");
-	settextcolor(LIGHTGREEN);
-	outtextxy(230, 250, L"看");
+	outtextxy(50, 50, L"谢谢观看~~~~~~");
+
 	_getch();
 	closegraph();//关闭图形界面
 	exit(0);

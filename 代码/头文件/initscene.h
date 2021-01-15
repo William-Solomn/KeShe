@@ -34,7 +34,7 @@ void darkClouds()//绘制乌云函数
 void lotusLeaf()//绘制荷叶函数
 {
 	int x;
-	setfillcolor(LIGHTGREEN);
+	setfillcolor(RGB(116, 199, 0));
 	solidellipse(x = 40, waterHeight, x + 60, waterHeight + 30);
 	solidellipse(x = 140, waterHeight, x + 60, waterHeight + 30);
 	solidellipse(x = 240, waterHeight, x + 60, waterHeight + 30);
@@ -44,7 +44,7 @@ void lotusLeaf()//绘制荷叶函数
 }
 void pond()//绘制池塘函数
 {
-	setfillcolor(BLUE);
+	setfillcolor(RGB(25, 48, 66));//25, 48, 66);
 	solidrectangle(0, waterHeight, WIN_WIDTH, WIN_HEIGHT);
 	lotusLeaf();
 }
@@ -58,8 +58,9 @@ void start()//场景开头介绍函数
 	setbkmode(TRANSPARENT);//设置字体背景为透明
 	x = 190;
 	y = 50;
-	putimage(0, 0, &bg);
-	//以彩虹的颜色顺序显示主题
+
+	loadimage(&bg, L"image.jpg", WIN_WIDTH, WIN_HEIGHT);
+	putimage(0, 0, &bg);	//以彩虹的颜色顺序显示主题
 	settextstyle(50, 0, L"楷体");
 	settextcolor(LIGHTRED);
 	outtextxy(x + 10, y + 10, L"池");
@@ -79,17 +80,20 @@ void start()//场景开头介绍函数
 	setcolor(YELLOW);
 	settextstyle(30, 0, L"宋体");
 	outtextxy(x - 180, y + 250, L"----");
-	outtextxy(x - 100, y + 250, L"张鸿伟");
-	outtextxy(x + 50, y + 250, L"李威康");
-	outtextxy(x - 30, y + 310, L"乔熙茜");
-	outtextxy(x + 120, y + 310, L"胡许杰");
+	outtextxy(x - 100, y + 250, L"仇誓博");
+	outtextxy(x + 50, y + 250, L"陈昱健");
+	outtextxy(x - 30, y + 310, L"郑世杰");
+	outtextxy(x + 120, y + 310, L"温家乐");
 	_getch();
 	cleardevice();
 	//显示初始水位
+
+	loadimage(&bg, L"image.jpg", WIN_WIDTH, WIN_HEIGHT);
 	putimage(0, 0, &bg);
-	setcolor(LIGHTBLUE);
+
+	setcolor(YELLOW);
 	settextstyle(50, 0, L"黑体");
-	outtextxy(70, 100, L"池塘水位：");
+	outtextxy(70, 100, L"池塘雨量：");
 	outtextxy(320, 100, s);
 	_getch();
 	cleardevice();
